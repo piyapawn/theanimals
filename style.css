@@ -1,0 +1,41 @@
+body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+}
+
+  .wrapper {
+    background-image: url("pictures/BG1.jpg");
+    background-repeat: repeat-x;
+    background-size: 100vw 100vh;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+
+  }
+  .outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+  }
+
+  .outer-wrapper {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    ::-webkit-scrollbar {
+      display:none;
+    }
