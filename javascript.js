@@ -3,7 +3,7 @@ function myFunction() {
   var x = elmnt.scrollLeft;
   var y = elmnt.scrollTop;
   console.log(y);
-  distances.innerHTML = y;
+  scrollNumber.innerHTML = y;
   // Message
 
 }

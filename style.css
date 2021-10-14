@@ -4,6 +4,19 @@ body{
   margin: 0;
 }
 
+.scrollView{
+  position:fixed;
+  top:0px;
+  left:-10px;
+  padding:1em;
+  margin:0;
+  background:white;
+  border-radius: 20px;
+  color: black;
+  transition: 0.5s;
+  z-index: 2;
+}
+
 .slide {
   width: 100vw;
   height: 100vh;
