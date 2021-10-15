@@ -24,13 +24,13 @@ body{
 .wrapper {
   display: flex;
   flex-direction: row;
-  width: 400vw;
+  width: 300vw;
 }
 
   .wrapper {
-    background-image: url("pictures/BG1.jpg");
+    background-image: url("pictures/BG\ Desktop.jpg");
     background-repeat: repeat-x;
-    background-size: 100vw 100vh;
+    background-size: 200vw 100vh;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 
@@ -52,3 +52,32 @@ body{
     ::-webkit-scrollbar {
       display:none;
     }
+
+/* ป้ายกลมหน้า2*/
+#circletap{
+  position: relative;
+  top: 25%;
+  left: 35%;
+}
+#tree01{
+  position: relative;
+  bottom: 92vh;
+  right: 32vw;
+  transform: scale(1);
+}
+#text-page2{
+  position: absolute;
+  top: 40vh;
+  left: 138vw;
+  font-size: 20px;
+  color: black;
+  z-index: 70;
+}
+#text-page3{
+  position: absolute;
+  top: 32vh;
+  right: 30vw;
+  font-size: 100px;
+  color: white;
+  z-index: 70;
+}
