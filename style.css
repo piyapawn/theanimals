@@ -1,15 +1,11 @@
-body{
-  overflow-y: hidden;
-  overflow-x: hidden;
-  margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 
 .scrollView{
-  position:fixed;
-  top:0px;
-  left:-10px;
-  padding:1em;
-  margin:0;
+  position: fixed;
+  top: 5.5%;
+  right: 0px;
+  padding: 1em;
+  margin: 0;
   background:white;
   border-radius: 20px;
   color: black;
@@ -17,9 +13,99 @@ body{
   z-index: 2;
 }
 
+html{
+  
+}
+
+body{
+  font-family: 'Kanit', sans-serif;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+header{
+  position: fixed;
+  display: flex;
+  background-color: hsl(40, 75%, 90%);
+  z-index: 80;
+}
+.header-left{
+  width: 100%;
+  color: black;
+}
+.header-right{
+  color: black;
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: end;
+}
+.header-right a{
+  text-decoration: none;
+  margin: auto 30px auto 30px;
+}
+.nav-menu{
+  color: black;
+  cursor: pointer;
+}
+
+.fullwidth-img{
+  width: 100%;
+  max-width: 10%;
+  left: 10%;
+  cursor: pointer;
+}
+
 .slide {
   width: 100vw;
   height: 100vh;
+}
+
+.fullwidth-grass{
+  width: 100%;
+  max-width: 1920px;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+.fullwidth-logo{
+  width: 100%;
+  max-width: 45%;
+  position: relative;
+  top: 10%;
+  left: 1%;
+}
+.fullwidth-bush{
+  width: 100%;
+  max-width: 15%;
+  position: absolute;
+  left: -3%;
+  bottom: 0;
+  z-index: 70;
+}
+.fullwidth-jeepCar{
+  width: 100%;
+  max-width: 15%;
+  position: absolute;
+  left: 50vw;
+  bottom: 10vh;
+  transition: 1s;
+}
+.slide.one{
+  scroll-behavior: smooth;
+}
+.slide.two{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide.three{
+  margin:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wrapper {
   display: flex;
@@ -28,6 +114,7 @@ body{
 }
 
   .wrapper {
+    scroll-behavior: smooth;
     background-image: url("pictures/BG\ Desktop.jpg");
     background-repeat: repeat-x;
     background-size: 200vw 100vh;
@@ -36,6 +123,7 @@ body{
 
   }
   .outer-wrapper {
+    scroll-behavior: smooth;
     width: 100vh;
     height: 100vw;
     transform: rotate(-90deg) translateX(-100vh);
@@ -56,27 +144,20 @@ body{
 /* ป้ายกลมหน้า2*/
 #circletap{
   position: relative;
-  top: 25%;
-  left: 35%;
+
 }
 #tree01{
-  position: relative;
-  bottom: 92vh;
-  right: 32vw;
-  transform: scale(1);
+  position: absolute;
+  transform: scale(0.9);
+  top: -16.5vw;
 }
 #text-page2{
   position: absolute;
-  top: 40vh;
-  left: 138vw;
   font-size: 20px;
   color: black;
   z-index: 70;
 }
 #text-page3{
-  position: absolute;
-  top: 32vh;
-  right: 30vw;
   font-size: 100px;
   color: white;
   z-index: 70;
