@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="javascript.js"></script>
     <title>What if animals gone?</title>
   </head>
@@ -8,46 +9,471 @@
     <!-- Scroll View 
     <div id="text">
       <h1 class="scrollView">ScrollY : <span id="scrollNumber">0</span></h1>
-    </div>
-    -->
+      <button class="scrollView" onclick="checkOffSetLeft()">OffSetLeft</button>
+    </div> -->
+    <!-- Light -->
+    <div id="light" class="light fa fa-lightbulb-o" onclick="lightSwitch(); modalCount++;" style="font-size: 5em;"></div>
+    
+    <!-- Header -->
     <header>
-      <div class="header-left">
-        <a href="#first-page">
+      <div class="header_left">
+        <a class="firstPageIcon" href="#first_page">
           <img class="fullwidth-img" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/ชื่อเว็ป.png">
         </a>
-        
       </div>
-      <div class="header-right">
-        <a href="#first-page"><b class="nav-menu">หน้าแรก</b></a>
-        <a href="#second-page"><b class="nav-menu">หน้าสอง</b></a>
-        <a href="#coming-soon"><b class="nav-menu">Coming Soon..</b></a>
+      <div class="header_right">
+        <a href="#first_page"><b class="nav_menu">หน้าหลัก</b></a>
+
+        <!-- Drop Down Button -->
+        <div class="dropdown">
+          <button class="dropbtn"><b class="nav_menu">ชนิดของสัตว์</b></button>
+          <div class="dropdown_content">
+            <a href="#third_page">สัตว์เลี้ยงลูกด้วยนม</a>
+            <a href="#fourth_page">นก</a>
+            <a href="#fifth_page">สัตว์เลื้อยคลาน</a>
+            <a href="#six_page">สัตว์สะเทินน้ำสะเทินบก</a>
+            <a href="#seven_page">แมลง</a>
+          </div>
+        </div>
+        <!-- / Drop Down Button -->
+
+        <a href="cause-page.html"><b class="nav_menu">สาเหตุการลดลง</b></a>
+        <a href="solve-page.html"><b class="nav_menu">วิธีแก้ปัญหา</b></a>
+        <audio id="myMusic" src="05. Greenpath.mp3" loop="loop"></audio>
+        <button class="musicButton" onclick="playMusic()">♫</button>
       </div>
     </header>
+    <!-- /Header -->
 
     <div id="scroll" class="outer-wrapper" onscroll="myFunction()">
       <div class="wrapper">
-        <div id="first-page" class="slide one">
-          <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png">
+
+        <!-- First Page -->
+        <div id="first_page" class="slide one">
+          <!-- <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png"> -->
+
+          <!-- Layer 1 -->
           <img class="fullwidth-logo" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/ชื่อเว็ป.png">
           <img class="fullwidth-bush" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หน้าชื่อเว็บ ป่าหน้า-01.png">
+
+          <!-- Layer 2 -->
           <img id="jeep" class="fullwidth-jeepCar" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/รถ jeep -01.png">
+
+          <!-- Layer 3 -->
+          <img class="firstPage_tree1" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/เกริ่น ป่าหลัง 1.1.png">
+
         </div>
-        <div id="second-page" class="slide two">
-          <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png">
+
+        <!-- Second Page -->
+        <div id="second_page" class="slide two">
+          <!-- <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png"> -->
+
+          <!-- Laver 1 -->
+          <img class="secondPage_tree1" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/เกริ่น ป่าหน้า 1.1.png">
+          <img class="secondPage_tree2" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/เกริ่น ป่าหน้า 1.2.png">
+
+          <!-- Layer 2 -->
           <img id="circletap" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/ป้ายกลม_.png">
-          <img id="tree01" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/เกริ่น ป่าหน้า-01.png">
-          <p id="text-page2">เหล่านักผจญภัยทั้งหลาย<br>
-            คงจะชื่นชอบสัตว์ป่าน้อยใหญ่ที่ทำให้เราเพลินเพลิน<br>
-            และตื่นเต้นไปกับการเดินป่า แต่ถ้าวันหนึ่ง...<br><br>
-            <b>สัตว์เหล่านี้จะหายไปล่ะ</b>
-          </p>
+          <div class="text_area">
+            <p id="text_page2">เหล่านักผจญภัยทั้งหลาย<br>
+              คงจะชื่นชอบสัตว์ป่าน้อยใหญ่ที่ทำให้เราเพลินเพลิน<br>
+              และตื่นเต้นไปกับการเดินป่า แต่ถ้าวันหนึ่ง...<br><br>
+              <b>สัตว์เหล่านี้จะหายไปล่ะ</b>
+            </p>
+          </div>
+
+          <!-- Layer 3 -->
+          <img class="secondPage_tree3" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/เกริ่น ป่าหลัง 1.2.png">
+          <img class="secondPage_tree4" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/เกริ่น ป่าหลัง 1.3.png">
+          
         </div>
-        <div id="coming-soon" class="slide three">
-          <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png">
-          <p id="text-page3"><b>Coming soon..</b></p>
+
+        <!-- Third Page -->
+        <div id="third_page" class="slide three">
+          <!-- <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png"> -->
+
+          <!-- Laver 1 -->
+          <img class="thirdPage_tree1" src="pictures/Desktop ป่าสัตว์/นก ป่าหน้า-01.png">
+
+          <!-- Laver 2 -->
+          <img onclick="mammalModal.dataset.scene = `tigerModal`; popupModal.dataset.scene = `mammalModal`; animalModal();" class="tiger" src="pictures/GIF สัตว์/เสือ.gif" alt="">
+          <img onclick="mammalModal.dataset.scene = `squirrelModal`; popupModal.dataset.scene = `mammalModal`; animalModal();" class="squirrel" src="pictures/GIF สัตว์/กระรอก.gif" alt="">
+          <img onclick="mammalModal.dataset.scene = `binturongModal`; popupModal.dataset.scene = `mammalModal`; animalModal();" class="binturong" src="pictures/GIF สัตว์/หมีขอ.gif" alt="">
+
+          <!-- Layer 3 -->
+          <img class="thirdPage_tree2" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/เกริ่น ป่าหลัง 1.2.png">
+          <img class="thirdPage_tree3" src="pictures/Desktop ป่าสัตว์/เสือ ป่าหลัง 1.2-01.png">
+
+        </div>
+
+        <!-- Fourth Page -->
+        <div id="fourth_page" class="slide four">
+          <!-- <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png"> -->
+          <!-- Laver 1 -->
+          <img class="fourthPage_tree1" src="pictures/Desktop ป่าสัตว์/จระเข้ ป่าหน้า-01.png">
+
+          <!-- Laver 2 -->
+          <img onclick="birdModal.dataset.scene = `peaCockModal`; popupModal.dataset.scene = `birdModal`; animalModal();" class="peaCock" src="pictures/GIF สัตว์/นกยูง.gif" alt="">
+          <img onclick="birdModal.dataset.scene = `rhinoHornbillModal`; popupModal.dataset.scene = `birdModal`; animalModal();" class="rhinoHornbill" src="pictures/GIF สัตว์/นกแรด.gif" alt="">
+          <img onclick="birdModal.dataset.scene = `blackKiteModal`; popupModal.dataset.scene = `birdModal`; animalModal();" class="blackKite" src="pictures/GIF สัตว์/เหยี่ยวดำ_1.gif" alt="">
+
+          <!-- Layer 3 -->
+          <img class="fourthPage_tree2" src="pictures/Desktop ป่าสัตว์/นก ป่าหลัง 1.1 -.png">
+          <img class="fourthPage_tree3" src="pictures/Desktop ป่าสัตว์/กบ ป่าหลัง-01.png">
+
+        </div>
+
+        <!-- Fifth Page -->
+        <div id="fifth_page" class="slide five">
+
+          <!-- Laver 1 -->
+          <img class="fifthPage_tree1" src="pictures/Desktop ป่าสัตว์/กบ ป่าหน้า 1.1.png">
+
+          <!-- Laver 2 -->
+          <!-- <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png"> -->
+          <img onclick="reptileModal.dataset.scene = `crocodileModal`; popupModal.dataset.scene = `reptileModal`; animalModal();" class="crocodile" src="pictures/GIF สัตว์/จระเจ้.gif" alt="">
+          <img onclick="reptileModal.dataset.scene = `blueLizardModal`; popupModal.dataset.scene = `reptileModal`; animalModal();" class="blueLizard" src="pictures/GIF สัตว์/กิ้งก่า.gif" alt="">
+
+          <!-- Laver 3 -->
+          <img class="fifthPage_tree2" src="pictures/Desktop ป่าสัตว์/จระเข้ ป่ากลาง -01.png">
+          <img class="fifthPage_tree3" src="pictures/Desktop ป่าสัตว์/จระเข้ ป่าหลัง 1.1.png">
+          <img class="fifthPage_tree4" src="pictures/Desktop ป่าสัตว์/จระเข้ ป่าหลัง 1.2 .png">
+
+        </div>
+
+        <!-- Six Page -->
+        <div id="six_page" class="slide six">
+          <!-- <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png"> -->
+
+          <!-- Laver 1 -->
+          <img class="sixPage_tree1" src="pictures/Desktop ป่าสัตว์/กบ ป่าหน้า 1.2.png">
+
+          <!-- Laver 2 -->
+          <img onclick="amphibiansModal.dataset.scene = `doichangFrogModal`; popupModal.dataset.scene = `amphibiansModal`; animalModal();" class="doichangFrog" src="pictures/GIF สัตว์/กบ.gif" alt="">
+          <img onclick="amphibiansModal.dataset.scene = `himalayanNewtModal`; popupModal.dataset.scene = `amphibiansModal`; animalModal();" class="himalayanNewt" src="pictures/GIF สัตว์/กระทั่ง.gif" alt="">
+
+          <!-- Laver 3 -->
+          <img class="sixPage_tree2" src="pictures/Desktop ป่าสัตว์/กบ ป่ากลาง -01.png">
+          <img class="sixPage_tree3" src="pictures/Desktop ป่าสัตว์/กบ ป่าหลัง-01.png">
+
+        </div>
+
+        <!-- Seven Page -->
+        <div id="seven_page" class="slide seven">
+
+          <!-- Laver 1 -->
+          <!-- <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png"> -->
+          <img onclick="insectModal.dataset.scene = `troidesHelenaModal`; popupModal.dataset.scene = `insectModal`; animalModal();" class="troidesHelena" src="pictures/GIF สัตว์/ผีเสื้อ.gif" alt="">
+          <img onclick="insectModal.dataset.scene = `giraffeStagBeetleModal`; popupModal.dataset.scene = `insectModal`; animalModal();" class="giraffeStagBeetle" src="pictures/GIF สัตว์/ด้วง.gif" alt="">
+
+          <!-- Laver 2 -->
+          <img class="sevenPage_tree1" src="pictures/Desktop ป่าสัตว์/ด้วง ป่ากลาง -01.png">
+          <img class="sevenPage_tree2" src="pictures/Desktop ป่าสัตว์/ด้วง ป่าหลัง 1.1.png">
+          <img class="sevenPage_tree3" src="pictures/Desktop ป่าสัตว์/ด้วง ป่าหลัง 1.2-01.png">
+
+        </div>
+
+        <!-- Eight Page -->
+        <div id="eight_page" class="slide eight">
+          <!-- <img class="fullwidth-grass" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หญ้า.png"> -->
+
+          <!-- Laver 1 -->
+          <img class="eightPage_tree1" src="pictures/Desktop ป่าสัตว์/จบหน้าแรก ป่าหน้า-01.png">
+
+          <!-- Laver 2 -->
+          <img id="circletap" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/ป้ายกลม_.png">
+          <div class="text_area">
+            <p id="text_page3">
+              สัตว์ที่เหล่านักผจญภัยทั้งหลาย <br>
+              ได้เห็นไปนั้น เป็นแค่ส่วนหนึ่งที่พวกเรา <br>
+              นำมาให้ชม นั่นหมายความว่ายังมีสัตว์อีกหลายตัว <br>
+              ที่กำลังจะหายไป แล้วทุกคนสงสัยกันไหมว่า... <br><br>
+              <b>สัตว์ทั้งหลายหายไปเพราะอะไร ?</b>
+            </p>
+            <a href="cause-page.html">
+              <img class="nextButton" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/ปุ่มลูกศร.png" alt="">
+            </a>
+          </div>
+
+          <!-- Laver 3 -->
+          <img class="eightPage_tree2" src="pictures/Desktop ป่าสัตว์/จบหน้าแรก ป่ากลาง-01.png">
+
         </div>
 
       </div>
     </div>
+
+    <!---------- Animal Modal ---------->
+    <div id="animalModal">
+      <div class="backgroundModal"></div>
+
+      <!-- Pop Up -->
+      <div class="popupModal" id="popupModal">
+        <img class="popupModalBG" src="/pictures/Popup icon/Desktop_popup.PNG" alt="">
+        <!-- Mammal Modal -->
+        <div id="mammalModal" class="mammalModal">
+          <!-- Tiger Modal -->
+          <div class="tigerModal">
+            <div class="tigerName">เสือโคร่ง</div>
+            <div class="tigerPic">
+              <img class="tigerPicModal" src="/pictures/GIF สัตว์/เสือ.gif" alt="">
+            </div>
+            <div class="tigerContent">
+              <h4>ปัจจัยประชากรเสือโคร่งลดลง</h4>
+              <p>การที่เหยื่อของเสือโคร่งถูกล่าโดยมนุษย์</p>
+              <ul>
+                <li>การสูญเสียถิ่นที่อยู่อาศัย เกิดจากมนุษย์ต้องการเปลี่ยน หรือขยายพื้นที่เพื่อทำการเกษตรผืนป่าขนาดใหญ่ถูกบุกรุกจนกลายเป็นหย่อมป่าขนาดเล็กๆ</li>
+                <li>การที่เสือโคร่งตกเป็นเป้าหมายของการล่าโดยตรงจากความต้องการของตลาดที่นำหนังเสือโคร่งมาใช้ตกแต่งบ้าน หรือความเชื่อที่ว่าชิ้นส่วนอวัยวะของเสือโคร่งนั้นเป็นตัวยาแผนโบราณของจีน</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Squirrel Modal -->
+          <div class="squirrelModal">
+            <div class="squirrelName">กระรอกสามสี</div>
+            <div class="squirrelPic">
+              <img class="squirrelPicModal" src="/pictures/GIF สัตว์/กระรอก.gif" alt="">
+            </div>
+            <div class="squirrelContent">
+              <p>ประชากรกระรอกบางชนิดในพื้นที่อนุรักษ์ลดจำนวนลงอย่างรวดเร็ว โดยเฉพาะกลุ่มในภาคเหนือ และภาคตะวันออกเฉียงเหนือ</p>
+              <h4>ปัจจัยประชากรกระรอกสามสีลดลง</h4>
+              <ul>
+                <li>ถูกล่าเพื่อเป็นอาหาร</li>
+                <li>ลักลอบจับเลี้ยงกระรอกหลากสีเพื่อค้าเป็นสัตว์
+                  มีการค้าขายในตลาดค้าสัตว์ถึง 7 ชนิด
+                  ย่อย โดยชนิดย่อย C. finlaysonii menamicus มีความชุกชุมในธรรมชาติน้อยมาก และ 
+                  C. finlaysonii sinistralis ไม่พบการกระจายพื้นที่ป่าอนุรักษ์บางแห่งภาคเหนือแล้ว</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Binturong Modal -->
+          <div class="binturongModal">
+            <div class="binturongName">หมีขอ</div>
+            <div class="binturongPic">
+              <img class="binturongPicModal" src="/pictures/GIF สัตว์/หมีขอ.gif" alt="">
+            </div>
+            <div class="binturongContent">
+              <h4>ปัจจัยประชากรเสือโคร่งลดลง</h4>
+              <p>การที่เหยื่อของเสือโคร่งถูกล่าโดยมนุษย์</p>
+              <ul>
+                <li>การสูญเสียถิ่นที่อยู่อาศัย เกิดจากมนุษย์ต้องการเปลี่ยน หรือขยายพื้นที่เพื่อทำการเกษตรผืนป่าขนาดใหญ่ถูกบุกรุกจนกลายเป็นหย่อมป่าขนาดเล็กๆ</li>
+                <li>การที่เสือโคร่งตกเป็นเป้าหมายของการล่าโดยตรงจากความต้องการของตลาดที่นำหนังเสือโคร่งมาใช้ตกแต่งบ้าน หรือความเชื่อที่ว่าชิ้นส่วนอวัยวะของเสือโคร่งนั้นเป็นตัวยาแผนโบราณของจีน</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Mammal Pop Up Icon -->
+          <div class="mammalPopupIcon">
+            <img class="popupIcon tigerPopupIcon" onclick="mammalModal.dataset.scene = `tigerModal`" src="/pictures/Popup icon/1 ไอคอนเสือ.png" alt="">
+            <img class="popupIcon squirrelPopupIcon" onclick="mammalModal.dataset.scene = `squirrelModal`" src="/pictures/Popup icon/1 ไอคอนกระรอก.png" alt="">
+            <img class="popupIcon binturongPopupIcon" onclick="mammalModal.dataset.scene = `binturongModal`" src="/pictures/Popup icon/1 ไอคอนหมีขอ.png" alt="">
+          </div>
+        </div>
+        <!-- /Mammal Modal -->
+
+        <!-- -------------------------------------------------- -->
+
+        <!-- Bird Modal -->
+        <div id="birdModal" class="birdModal">
+          <!-- Peacock Modal -->
+          <div class="peaCockModal">
+            <div class="peaCockName">นกยูง</div>
+            <div class="peaCockPic">
+              <img class="peaCockPicModal" src="/pictures/GIF สัตว์/นกยูง.gif" alt="">
+            </div>
+            <div class="peaCockContent">
+              <h4>ปัจจัยประชากรเสือโคร่งลดลง</h4>
+              <p>การที่เหยื่อของเสือโคร่งถูกล่าโดยมนุษย์</p>
+              <ul>
+                <li>การสูญเสียถิ่นที่อยู่อาศัย เกิดจากมนุษย์ต้องการเปลี่ยน หรือขยายพื้นที่เพื่อทำการเกษตรผืนป่าขนาดใหญ่ถูกบุกรุกจนกลายเป็นหย่อมป่าขนาดเล็กๆ</li>
+                <li>การที่เสือโคร่งตกเป็นเป้าหมายของการล่าโดยตรงจากความต้องการของตลาดที่นำหนังเสือโคร่งมาใช้ตกแต่งบ้าน หรือความเชื่อที่ว่าชิ้นส่วนอวัยวะของเสือโคร่งนั้นเป็นตัวยาแผนโบราณของจีน</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Rhinoceros Hornbill Modal -->
+          <div class="rhinoHornbillModal">
+            <div class="rhinoHornbillName">นกเงือกหัวแรด</div>
+            <div class="rhinoHornbillPic">
+              <img class="rhinoHornbillPicModal" src="/pictures/GIF สัตว์/นกแรด.gif" alt="">
+            </div>
+            <div class="rhinoHornbillContent">
+              <p>ประชากรกระรอกบางชนิดในพื้นที่อนุรักษ์ลดจำนวนลงอย่างรวดเร็ว โดยเฉพาะกลุ่มในภาคเหนือ และภาคตะวันออกเฉียงเหนือ</p>
+              <h4>ปัจจัยประชากรกระรอกสามสีลดลง</h4>
+              <ul>
+                <li>ถูกล่าเพื่อเป็นอาหาร</li>
+                <li>ลักลอบจับเลี้ยงกระรอกหลากสีเพื่อค้าเป็นสัตว์
+                  มีการค้าขายในตลาดค้าสัตว์ถึง 7 ชนิด
+                  ย่อย โดยชนิดย่อย C. finlaysonii menamicus มีความชุกชุมในธรรมชาติน้อยมาก และ 
+                  C. finlaysonii sinistralis ไม่พบการกระจายพื้นที่ป่าอนุรักษ์บางแห่งภาคเหนือแล้ว</li>
+              </ul>
+            </div>
+          </div>
+          <!-- ฺBackkite Modal -->
+          <div class="blackKiteModal">
+            <div class="blackKiteName">เหยี่ยวดำ</div>
+            <div class="blackKitePic">
+              <img class="blackKitePicModal" src="/pictures/GIF สัตว์/เหยี่ยวดำ_1.gif" alt="">
+            </div>
+            <div class="blackKiteContent">
+              <h4>ปัจจัยประชากรเสือโคร่งลดลง</h4>
+              <p>การที่เหยื่อของเสือโคร่งถูกล่าโดยมนุษย์</p>
+              <ul>
+                <li>การสูญเสียถิ่นที่อยู่อาศัย เกิดจากมนุษย์ต้องการเปลี่ยน หรือขยายพื้นที่เพื่อทำการเกษตรผืนป่าขนาดใหญ่ถูกบุกรุกจนกลายเป็นหย่อมป่าขนาดเล็กๆ</li>
+                <li>การที่เสือโคร่งตกเป็นเป้าหมายของการล่าโดยตรงจากความต้องการของตลาดที่นำหนังเสือโคร่งมาใช้ตกแต่งบ้าน หรือความเชื่อที่ว่าชิ้นส่วนอวัยวะของเสือโคร่งนั้นเป็นตัวยาแผนโบราณของจีน</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Bird Pop Up Icon -->
+          <div class="birdPopupIcon">
+            <img class="popupIcon peaCockPopupIcon" onclick="birdModal.dataset.scene = `peaCockModal`" src="/pictures/Popup icon/2 ไอคอนนกยูง.png" alt="">
+            <img class="popupIcon rhinoHornbillPopupIcon" onclick="birdModal.dataset.scene = `rhinoHornbillModal`" src="/pictures/Popup icon/2 ไอคอนนกแรด.png" alt="">
+            <img class="popupIcon blackKitePopupIcon" onclick="birdModal.dataset.scene = `blackKiteModal`" src="/pictures/Popup icon/2 ไอคอนเหยี่ยว.png" alt="">
+          </div>
+        </div>
+        <!-- /Bird Modal -->
+
+        <!-- Reptile Modal -->
+        <div id="reptileModal" class="reptileModal">
+          <!-- Crocodile Modal -->
+          <div class="crocodileModal">
+            <div class="crocodileName">จระเข้</div>
+            <div class="crocodilePic">
+              <img class="crocodilePicModal" src="/pictures/GIF สัตว์/จระเจ้.gif" alt="">
+            </div>
+            <div class="crocodileContent">
+              <h4>ปัจจัยประชากรจระเข้ลดลง</h4>
+              <ul>
+                <li>การล่าเอาหนังอย่างไม่มีขอบเขตจำกัด เช่นเดียวกับจระเข้ชนิดอื่นๆ</li>
+                <li>การทำลายแหล่งที่อยู่ เมื่อพื้นที่ลุ่มน้ำขนาดใหญ่ถูกแปรสภาพเป็นนาข้าว</li>
+                <li>จระเข้ที่หลงเหลืออยู่เพียงไม่กี่ตัวก็ถูกไล่ล่า และจับไปขายฟาร์มเลี้ยงจระเข้ จระเข้ที่เลี้ยงในฟาร์มก็มีปัญหาการสูญเสียลักษณะทางกรรมพันธุ์โดยการผสมข้ามชนิดระหว่างจระเข้น้ำจืดกับจระเข้น้ำเค็ม</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Blue-crested Lizard Modal -->
+          <div class="blueLizardModal">
+            <div class="blueLizardName">กิ้งก่าดงคอสีฟ้า</div>
+            <div class="blueLizardPic">
+              <img class="blueLizardPicModal" src="/pictures/GIF สัตว์/กิ้งก่า.gif" alt="">
+            </div>
+            <div class="blueLizardContent">
+              <h4>ปัจจัยประชากรกิ้งก่าดงคอสีฟ้าลดลง</h4>
+              <ul>
+                <li>การบุกรุกทำลายป่า ทำให้กิ้งก่าไม่มีที่อยู่อาศัย จึงต้องไปอาศัยในพื้นที่ที่มีมนุษย์ จึงถูกมนุษย์ล่าทำก้อยกะปอมเป็นจำนวนมาก</li>
+                <li>ถูกนำมาเป็นสัตว์เลี้ยงเนื่องจากมีความสวยงาม มีทั้งเลี้ยงแบบอนุรักษ์และเลี้ยงไว้ดูเล่น และบางคนก็เลี้ยงแบบเข้าใจผิด จึงทำให้กิ้งก่าตายเป็นจำนวนมาก</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Reptile Pop Up Icon -->
+          <div class="reptilePopupIcon">
+            <img class="popupIcon crocodilePopupIcon" onclick="reptileModal.dataset.scene = `crocodileModal`" src="/pictures/Popup icon/3 ไอคอนจระเข้.png" alt="">
+            <img class="popupIcon blueLizardPopupIcon" onclick="reptileModal.dataset.scene = `blueLizardModal`" src="/pictures/Popup icon/3 ไอคอนกิ้งก่า.png" alt="">
+          </div>
+        </div>
+        <!-- /Reptile Modal -->
+
+        <!-- Amphibians Modal -->
+        <div id="amphibiansModal" class="amphibiansModal">
+          <!-- Doichang Frog Modal -->
+          <div class="doichangFrogModal">
+            <div class="doichangFrogName">กบดอยช้าง</div>
+            <div class="doichangFrogPic">
+              <img class="doichangFrogPicModal" src="/pictures/GIF สัตว์/กบ.gif" alt="">
+            </div>
+            <div class="doichangFrogContent">
+              <h4>ปัจจัยประชากรกบดอยช้างลดลง</h4>
+              <ul>
+                <li>การเกษตรกรรมที่ใช้สารเคมีทำให้กบเหล่านี้อาศัยอยู่ตามท้องไร่ท้องนาได้รับผลกระทบ เมื่อกบวางไข่มีสารเคมีปะปนในแหล่งน้ำไข่กบก็ตาย</li>
+                <li>การตัดไม้ทำลายป่า</li>
+                <li>ถูกสัตว์ผู้ล่า รุกรานที่อยู่อาศัย</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Himalayan Newt Modal -->
+          <div class="himalayanNewtModal">
+            <div class="himalayanNewtName">กะท่าง</div>
+            <div class="himalayanNewtPic">
+              <img class="himalayanNewtPicModal" src="/pictures/GIF สัตว์/กระทั่ง.gif" alt="">
+            </div>
+            <div class="himalayanNewtContent">
+              <p>
+                เป็นสิ่งมีชีวิตสะเทินน้ำสะเทินบก หรือ ซาลาแมนเดอร์ ขนาดเล็กที่อาศัยอยู่ได้ทั้งบนบก และในน้ำเพียง
+                ชนิดเดียวที่พบได้ในประเทศไทย อาศัยอยู่ตามภูเขาสูงในภาคเหนือและภาคตะวันออกเฉียงเหนือตอนบน
+              </p>
+              <h4>ปัจจัยประชากรกะท่างลดลง</h4>
+              <ul>
+                <li>สถานภาพของกะท่างในปัจจุบัน</li>
+                <li>ถูกรุกรานทางถิ่นที่อยู่อาศัย</li>
+                <li>ถูกจับไปเลี้ยงเป็นสัตว์เลี้ยงเนื่องจากมีสีสันสวยงามโดยเฉพาะตัวผู้ในฤดูผสมพันธุ์แต้มสีส้มบนลำตัวจะ
+                  ชัดเจนมากเป็นที่ยอมรับของนักเลี้ยงสัตว์ว่า เป็นนิวต์ที่มีสีสันสวยงามที่สุดในโลก แต่ว่าการนำมาเลี้ยง
+                  เป็นสัตว์เลี้ยงไม่ประสบความสำเร็จ เพราะไม่อาจปรับตัวให้เข้ากับสภาพแวดล้อมในที่เลี้ยงได้</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Amphibians Pop Up Icon -->
+          <div class="amphibiansPopupIcon">
+            <img class="popupIcon doichangFrogPopupIcon" onclick="amphibiansModal.dataset.scene = `doichangFrogModal`" src="/pictures/Popup icon/4 ไอคอนกบ.png" alt="">
+            <img class="popupIcon himalayanNewtPopupIcon" onclick="amphibiansModal.dataset.scene = `himalayanNewtModal`" src="/pictures/Popup icon/4 ไอคอนกระทั่ง.png" alt="">
+          </div>
+        </div>
+        <!-- /Amphibians Modal -->
+
+        <!-- Insect Modal -->
+        <div id="insectModal" class="insectModal">
+          <!-- Doichang Frog Modal -->
+          <div class="troidesHelenaModal">
+            <div class="troidesHelenaName">ผีเสื้อถุงทองป่า</div>
+            <div class="troidesHelenaPic">
+              <img class="troidesHelenaPicModal" src="/pictures/GIF สัตว์/ผีเสื้อ.gif" alt="">
+            </div>
+            <div class="troidesHelenaContent">
+              <h4>ปัจจัยประชากรผีเสื้อถุงทองป่าลดลง</h4>
+              <ul>
+                <li>การสูญเสียถิ่นที่อยู่อาศัย และการแปลงสภาพพื้นที่ป่าให้กลายเป็นพื้นที่การเกษตรมลภาวะจากยาฆ่า
+                  แมลงตกค้างในดิน และทำลายตัวอ่อนแมลงในดินเกษตรกรรมสมัยใหม่ยังได้หักร้างทำลายต้นไม้ 
+                  และพุ่มไม้ที่เคยเป็นแหล่งที่อยู่อาศัยของแมลงอีกด้วย</li>
+                <li>การปนเปื้อนของเชื้อโรค และชนิดพันธุ์ต่างถิ่นที่เข้ามารุกรานแมลงท้องถิ่น</li>
+                <li>การเปลี่ยนแปลงสภาพภูมิอากาศซึ่งนำไปสู่ภัยทางธรรมชาติที่รุนแรงอุณหภูมิที่สูงขึ้นยังทำให้แมลง
+                  หลายชนิดไม่สามารถปรับตัวได้และสูญพันธุ์ โดยเฉพาะแมลงซึ่งอยู่ในเขตร้อนชื้นขณะที่แมลง
+                  ในเขตหนาว และอบอุ่นยังมีที่ทางในการอพยพเพื่อหาแหล่งที่อยู่อาศัยซึ่งมีอุณหภูมิที่เหมาะสมได้</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Himalayan Newt Modal -->
+          <div class="giraffeStagBeetleModal">
+            <div class="giraffeStagBeetleName">ด้วงคีมยีราฟ</div>
+            <div class="giraffeStagBeetlePic">
+              <img class="giraffeStagBeetlePicModal" src="/pictures/GIF สัตว์/ด้วง.gif" alt="">
+            </div>
+            <div class="giraffeStagBeetleContent">
+              <p>
+                พบกระจายพันธุ์ในป่าเบญจพรรณและป่าดิบแล้งของหลายประเทศในทวีปเอเชียจนถึงอินโดนีเซียใน
+                ประเทศไทยพบได้ในป่าทางภาคเหนือและภาคตะวันออก เป็นแมลงที่หากินในเวลากลางคืนโดยกิน
+                ยางไม้ตามเปลือกไม้ของต้นไม้ใหญ่ในป่า ตัวผู้มีพฤติกรรมใช้ขากรรไกรที่ยาวใหญ่นั้นต่อสู้เพื่อป้องกันตัว 
+                และสู้กับตัวผู้ตัวอื่นๆ เพื่อแย่งตัวเมียเพื่อผสมพันธุ์สำหรับสถานะในประเทศไทย 
+              </p>
+              <h4>ปัจจัยประชากรด้วงคีมยีราฟลดลง</h4>
+              <ul>
+                <b>การลดลงของแมงคีบยีราฟ</b>
+                <li>เนื่องจากการถูกจับไปเป็นสัตว์เลี้ยง และสตัฟฟ์เพื่อการสะสม</li>
+                <li>การทำลายป่าที่เป็นถิ่นที่อยู่อาศัย</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Insect Pop Up Icon -->
+          <div class="insectPopupIcon">
+            <img class="popupIcon troidesHelenaPopupIcon" onclick="insectModal.dataset.scene = `troidesHelenaModal`" src="/pictures/Popup icon/5 ไอคอนผีเสื้อ.png" alt="">
+            <img class="popupIcon giraffeStagBeetlePopupIcon" onclick="insectModal.dataset.scene = `giraffeStagBeetleModal`" src="/pictures/Popup icon/5 ไอคอนด้วง.png" alt="">
+          </div>
+        </div>
+        <!-- /Insect Modal -->
+        
+        <button class="close" onclick="closeModal()">&times;</button>
+      </div>
+      <!-- /Pop Up -->
+      
+    </div>
+    <!---------- / Animal Modal ---------->
+    <script>
+      
+    </script>
+
   </body>
 </html>
