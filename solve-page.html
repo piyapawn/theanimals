@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="solve-page-style.css">
+    <script src="solve-page-script.js"></script>
+    <title>Solve Page</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header_left">
+          <a class="firstPageIcon" href="index.html">
+            <img class="fullwidth-img" src="/pictures/Desktop หน้าแรก-เกริ่น-จบ/ชื่อเว็ป.png">
+          </a>
+        </div>
+        <div class="header_right">
+          <a href="index.html"><b class="nav_menu">หน้าหลัก</b></a>
+  
+          <!-- Drop Down Button -->
+          <div class="dropdown">
+            <button class="dropbtn"><b class="nav_menu">ชนิดของสัตว์</b></button>
+            <div class="dropdown_content">
+              <a href="index.html#third_page">สัตว์เลี้ยงลูกด้วยนม</a>
+              <a href="index.html#fourth_page">นก</a>
+              <a href="index.html#fifth_page">สัตว์เลื้อยคลาน</a>
+              <a href="index.html#six_page">สัตว์สะเทินน้ำสะเทินบก</a>
+              <a href="index.html#seven_page">แมลง</a>
+            </div>
+          </div>
+          <!-- / Drop Down Button -->
+  
+          <a href="cause-page.html"><b class="nav_menu">สาเหตุการลดลง</b></a>
+          <a href="solve-page.html"><b class="nav_menu">วิธีแก้ปัญหา</b></a>
+          <audio id="myMusic" src="05. Greenpath.mp3" loop="loop"></audio>
+          <button class="musicButton" onclick="playMusic()">♫</button>
+        </div>
+      </header>
+      <!-- /Header -->
+
+    <!-- Page -->
+    <div id="page" class="page" data-scene="first_page_solve">
+
+        <!-- Background First Page -->
+        <div class="background_firstPage">
+            <img class="treeLeft" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/Desktop ฉากต้นไม้ ซ้าย .png" alt="">
+            <img class="treeRight"src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/Desktop ฉากต้นไม้ ขวา.png " alt="">
+        </div>
+
+        <!-- Background Scene -->
+        <div class="background_scene"></div>
+        
+        <!-- Background Last Page -->
+        <div class="background_lastPage">
+            <img class="treeLeft_lastPage" src="/pictures/Desktop หน้าแรก-เกริ่น-จบ/จบหน้าแรก ป่าหน้า.png" alt="">
+            <img class="treeMiddle_lastPage" src="/pictures/Desktop ป่าสัตว์/จบหน้าแรก ป่ากลาง-01.png" alt="">
+            <img class="treeRight_lastPage"src="/pictures/Desktop หน้าแรก-เกริ่น-จบ/จบหน้าแรก ป่าหน้า.png" alt="">
+        </div>
+
+        <!-- Previous Button -->
+        <button class="prevButton nextprev">
+            <img class="prevPic" onclick="count--; NextPrevScene();" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/ปุ่มลูกศร.png" alt="">
+        </button>
+
+        <!-- Area Separator -->
+        <div class="separator"></div>
+
+        <!-- First Page solve -->
+        <div class="first_page_solve">
+            <div class="pic_first_page_solve">
+                <img class="solvePic_first_page_solve" src="/pictures/Desktop วิธีการแก้ปัญหา/หัวข้อวิธีการแก้ปัญหา.PNG" alt="">
+            </div>
+            <div class="content_first_page_solve">
+                <p>
+                    เนื่องจากสัตว์ป่าเป็นประโยชน์ต่อสิ่งแวดล้อม รวมถึงมนุษย์ด้วยไม่ว่าจะเป็นทางตรงหรือทางอ้อม <br>
+                    การที่สัตว์ป่ามีจำนวนลดน้อยลงในปัจจุบันจึงเป็นเรื่องที่ควรแก้ไข พวกเรามาดูกันดีกว่า <br>
+                    วิธีการแก้ปัญหาของสัตว์ป่าลดลงมีอะไรบ้าง
+                </p>
+            </div>
+            <!-- Next Button -->
+            <button class="nextButton">
+                <img class="nextPic" onclick="count++; NextPrevScene();" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/ปุ่มลูกศร.png" alt="">
+            </button>
+        </div>
+
+        <!-- Scene 1 -->
+        <div class="scene1">
+            <div class="pic_scene1">
+                <img class="picFrame" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/กรอบรูป.PNG" alt="">
+                <img class="solvePic_scene1" src="/pictures/Desktop วิธีการแก้ปัญหา/Desktop การเเก้ปัญหา1.png" alt="">
+            </div>
+            <div class="topic_scene1">
+                <h3>การอนุรักษ์พื้นที่</h3>
+            </div>
+            <div class="content_scene1">
+                <p>
+                    เนื่องจากการก่อสร้างที่อยู่อาศัยของมนุษย์นั้นมีพื้นที่เป็นจำนวนมาก <br>
+                    จึงจำเป็นที่จะต้องมีการกำหนดเขตพันธุ์สัตว์ป่า เพื่อที่จะให้สัตว์ป่านั้นได้ดำรงอยู่ในเขตพื้นที่ปลอดภัย <br>
+                    และมีการสืบพันธุ์ต่อเนื่องสืบไป
+                </p>
+            </div>
+        </div>
+
+        <!-- Scene 2 -->
+        <div class="scene2">
+            <div class="pic_scene2">
+                <img class="picFrame" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/กรอบรูป.PNG" alt="">
+                <img class="solvePic_scene2" src="/pictures/Desktop วิธีการแก้ปัญหา/Desktop การเเก้ปัญหา2.png" alt="">
+            </div>
+            <div class="topic_scene2">
+                <h3>การอนุรักษ์สัตว์ป่าทางวิชาการ</h3>
+            </div>
+            <div class="content_scene2">
+                <p>
+                    การศึกษาค้นคว้าทางวิชาการพื้นฐานทางการศึกษา และวิธีการอนุรักษ์สัตว์ป่าในด้านต่างๆ <br>
+                    ที่จะเกิดขึ้นตามธรรมชาติ ซึ่งวิธีการต่างๆ เหล่านี้จะส่งผลให้ประชาชนเข้าใจถึงการมีอยู่ของสัตว์ป่า <br>
+                    และความจำเป็นการขยายเพราะพันธุ์สัตว์ป่า
+                </p>
+            </div>
+        </div>
+
+        <!-- Scene 3 -->
+        <div class="scene3">
+            <div class="pic_scene3">
+                <img class="picFrame" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/กรอบรูป.PNG" alt="">
+                <img class="solvePic_scene3" src="/pictures/Desktop วิธีการแก้ปัญหา/Desktop การเเก้ปัญหา3.png" alt="">
+            </div>
+            <div class="topic_scene3">
+                <h3>การป้องกัน และปราบปราม</h3>
+            </div>
+            <div class="content_scene3">
+                <p>
+                    ออกกฎหมายห้ามล่าสัตว์ป่า ควบคุมการค้าสัตว์ป่า และประชาสัมพันธ์ให้ประชาชนรู้คุณค่าของสัตว์ป่า
+                </p>
+            </div>
+        </div>
+
+        <!-- Scene 4 -->
+        <div class="scene4">
+            <div class="pic_scene4">
+                <img class="picFrame" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/กรอบรูป.PNG" alt="">
+                <img class="solvePic_scene4" src="/pictures/Desktop วิธีการแก้ปัญหา/Desktop การเเก้ปัญหา4.png" alt="">
+            </div>
+            <div class="topic_scene4">
+                <h3>ช่วยลดโลกร้อน</h3>
+            </div>
+            <div class="content_scene4">
+                <p>
+                    หลีกเลี่ยงการกระทำที่ก่อให้เกิดภาวะโลกร้อน ซึ่งจะทำให้มีอากาศร้อนมากกว่าปกติ <br>
+                    อาจเกิดไฟไหม้ป่า หรือถิ่นที่อยู่ของสัตว์ป่าถูกทำลายได้
+                </p>
+            </div>
+        </div>
+
+        <!-- Scene 5 -->
+        <div class="scene5">
+            <div class="pic_scene5">
+                <img class="picFrame" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/กรอบรูป.PNG" alt="">
+                <img class="solvePic_scene5" src="/pictures/Desktop วิธีการแก้ปัญหา/Desktop การเเก้ปัญหา5.png" alt="">
+            </div>
+            <div class="topic_scene5">
+                <h3>ลดการใช้สารพิษในสิ่งแวดล้อม</h3>
+            </div>
+            <div class="content_scene5">
+                <p>
+                    ควบคุมการใช้สารพิษในการเกษตรกรรม หรือทำเกษตรอินทรีย์ เพื่อไม่ให้สัตว์ที่อาศัยอยู่แถวนั้นได้รับสารพิษ
+                </p>
+            </div>
+        </div>
+
+        <!-- Last Page solve -->
+        <div class="last_page_solve">
+            <img class="solvePic_last_page_solve" src="/pictures/Desktop หน้าแรก-เกริ่น-จบ/ป้ายกลม_.png" alt="">
+            <div class="intheCircle">
+                <p class="content_last_page_solve">
+                    พอเรารู้สาเหตุแล้ว เหล่านักผจญภัยทั้งหลาย <br>
+                    พร้อมที่จะทำให้สัตว์ป่ากลับมามีชีวิตที่ดีขึ้นกันรึยัง
+                </p>
+                <h3 class="content_last_page_solve">ถ้าพร้อมแล้วก็ไปดูกันเลย !</h3>
+            </div>
+            <!-- Button -->
+            <div class="buttonLastPageGroup">
+                <!-- Previous Button -->
+                <button class="prevButton buttonLastPage">
+                    <img class="prevPic" onclick="count--; NextPrevScene();" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/ปุ่มลูกศร.png" alt="">
+                </button>
+                <!-- Next Button -->
+                <button class="nextButton buttonLastPage">
+                    <img class="nextPic" onclick="count++; NextPrevScene();" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/ปุ่มลูกศร.png" alt="">
+                </button>
+            </div>
+            
+        </div>
+
+
+        <!-- /Scene -->
+
+        <!-- Next Button -->
+        <button class="nextButton nextprev">
+            <img class="nextPic" onclick="count++; NextPrevScene();" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/ปุ่มลูกศร.png" alt="">
+        </button>
+
+    </div>
+    <!-- /Page -->
+</body>
+</html>

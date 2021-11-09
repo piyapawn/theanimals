@@ -13,85 +13,207 @@
   z-index: 2;
 }
 
-html{
-  
-}
-
 body{
+  --posPage1: 0vw;
+  --posPage2: 100vw;
+  --posPage3: 200vw;
+  --posPage4: 300vw;
+  --posPage5: 400vw;
+  --posPage6: 500vw;
+  --posPage7: 600vw;
+  --posPage8: 700vw;
   font-family: 'Kanit', sans-serif;
   overflow-y: hidden;
   overflow-x: hidden;
   margin: 0;
 }
 
+/* --- Light --- */
+.light{
+  color:gold;
+  text-shadow: 0px 0px 50px gold;
+  position: fixed;
+  padding: 10px;
+  margin: 10;
+  border-radius: 50px;
+  bottom: 0vw;
+  right: 0vw;
+  cursor: pointer;
+  transition: 0.25s;
+  opacity: 0;
+  z-index: -20;
+}
+.light:hover{
+  transform: scale(1.2);
+}
+
+/* ----- Header ----- */
 header{
+  width: 100vw;
   position: fixed;
   display: flex;
   background-color: hsl(40, 75%, 90%);
   z-index: 80;
+  opacity: 0;
+  transition: 0.25s;
 }
-.header-left{
+header:hover{
+  opacity: 1;
+}
+.header_left{
   width: 100%;
   color: black;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
-.header-right{
+.firstPageIcon{
+  width: 5vw;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.header_right{
   color: black;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   display: flex;
   justify-content: end;
 }
-.header-right a{
+.header_right > a{
+  color: black;
   text-decoration: none;
   margin: auto 30px auto 30px;
-}
-.nav-menu{
-  color: black;
   cursor: pointer;
+  transition: 0.25s;
+}
+.header_right div{
+  color: black;
+  text-decoration: none;
+  margin: auto 30px auto 30px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.header_right a:hover{
+  transform: scale(1.1);
+  color: rgb(40, 97, 200);
+}
+
+/* Drop Down Button */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn{
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.2vw;
+  color: black;
+  border: 0px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.25s;
+}
+
+.dropdown_content {
+  font-size: 1rem;
+  display: none;
+  position: absolute;
+  background-color: hsl(40, 75%, 90%);
+  border-radius: 10px;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  transform: translateX(-30px);
+  z-index: 1;
+}
+
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.25s;
+}
+
+.dropdown_content a:hover {
+  background-color: hsl(40, 30%, 90%);
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  transform: scale(1.1);
+  color: rgb(40, 97, 200);
+}
+/* /Drop Down Button */
+
+.musicButton{
+  font-size: 3rem;
+  text-decoration: line-through;
+  color: rgb(40, 97, 200);
+  background-color: rgb(220, 232, 255);
+  margin: auto 30px auto 30px;
+  padding: 0px 20px 0px 20px;
+  border: 1px solid rgb(40, 97, 200);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.musicButton:hover{
+  border-radius: 0px;
+  border: 1px solid white;
+  color: rgb(220, 232, 255);
+  background-color: rgb(40, 97, 200);
 }
 
 .fullwidth-img{
-  width: 100%;
-  max-width: 10%;
-  left: 10%;
+  width: 5vw;
   cursor: pointer;
 }
+/* ----- /Header ----- */
 
+/* ----- Wrapper ----- */
+.wrapper {
+  background-image: url("pictures/BG\ Desktop.jpg");
+  background-repeat: repeat-x;
+  background-size: 200vw 100vh;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  
+}
+.outer-wrapper {
+  scroll-behavior: smooth;
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scroll-snap-type: y mandatory;
+}
+.outer-wrapper {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display:none;
+}
+/* ----- /Wrapper ----- */
+
+/* ----- Slide ----- */
 .slide {
   width: 100vw;
   height: 100vh;
+  scroll-snap-align: start;
 }
 
-.fullwidth-grass{
-  width: 100%;
-  max-width: 1920px;
-  position: absolute;
-  bottom: 0;
-  z-index: 100;
-}
-.fullwidth-logo{
-  width: 100%;
-  max-width: 45%;
-  position: relative;
-  top: 10%;
-  left: 1%;
-}
-.fullwidth-bush{
-  width: 100%;
-  max-width: 15%;
-  position: absolute;
-  left: -3%;
-  bottom: 0;
-  z-index: 70;
-}
-.fullwidth-jeepCar{
-  width: 100%;
-  max-width: 15%;
-  position: absolute;
-  left: 50vw;
-  bottom: 10vh;
-  transition: 1s;
-}
+/* Slide Page*/
 .slide.one{
   scroll-behavior: smooth;
 }
@@ -103,62 +225,1013 @@ header{
 }
 .slide.three{
   margin:0;
+}
+.slide.four{
+  margin:0;
+}
+.slide.five{
+  margin:0;
+}
+.slide.six{
+  margin:0;
+}
+.slide.seven{
+  margin:0;
+}
+.slide.eight{
+  margin:0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .wrapper {
   display: flex;
   flex-direction: row;
-  width: 300vw;
+  width: 800vw;
 }
 
-  .wrapper {
-    scroll-behavior: smooth;
-    background-image: url("pictures/BG\ Desktop.jpg");
-    background-repeat: repeat-x;
-    background-size: 200vw 100vh;
-    transform: rotate(90deg) translateY(-100vh);
-    transform-origin: top left;
-
-  }
-  .outer-wrapper {
-    scroll-behavior: smooth;
-    width: 100vh;
-    height: 100vw;
-    transform: rotate(-90deg) translateX(-100vh);
-    transform-origin: top left;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-  }
-
-  .outer-wrapper {
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-    ::-webkit-scrollbar {
-      display:none;
-    }
-
-/* ป้ายกลมหน้า2*/
-#circletap{
+/* First Page */
+.fullwidth-grass{
+  width: 100vw;
+  max-width: 1920px;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+.fullwidth-logo{
+  width: 40vw;
   position: relative;
+  top: 10%;
+  left: 1%;
+}
+.fullwidth-bush{
+  width: 40vw;
+  position: absolute;
+  left: -3vw;
+  bottom: 0;
+  z-index: 70;
+}
+.fullwidth-jeepCar{
+  width: 45vw;
+  position: absolute;
+  left: 50vw;
+  bottom: 10vh;
+  transition: 1s;
+}
 
-}
-#tree01{
+.firstPage_tree1{
+  width: 50vw;
   position: absolute;
-  transform: scale(0.9);
-  top: -16.5vw;
+  left: calc(var(--posPage1) + 55vw);
+  bottom: 0vw;
+  z-index: -10;
 }
-#text-page2{
+
+/* Second Page */
+.secondPage_tree1{
+  width: 70vw;
   position: absolute;
-  font-size: 20px;
+  left: calc(var(--posPage2) - 31vw);
+  bottom: -3vw;
+}
+.secondPage_tree2{
+  height: 63vw;
+  position: absolute;
+  left: calc(var(--posPage2) + 71vw);
+  bottom: -3vw;
+  z-index: 10;
+}
+.secondPage_tree3{
+  height: 50vw;
+  position: absolute;
+  left: calc(var(--posPage2) + 15vw);
+  bottom: 13vw;
+  z-index: -10;
+}
+.secondPage_tree4{
+  height: 50vw;
+  position: absolute;
+  left: calc(var(--posPage2) + 55vw);
+  bottom: 10vw;
+  z-index: -10;
+}
+#circletap{
+  width: 30vw;
+  position: absolute;
+  z-index: 50;
+}
+.text_area{
+  width: 30vw;
+  position: absolute;
+  text-align: center;
+  z-index: 50;
+}
+#text_page2{
+  font-size: 1.2vw;
   color: black;
   z-index: 70;
 }
-#text-page3{
-  font-size: 100px;
-  color: white;
+
+/* Third Page */
+.thirdPage_tree1{
+  height: 70vw;
+  position: absolute;
+  left: calc(var(--posPage3) + 75vw);
+  bottom: -2.5vw;
+  z-index: 10;
+}
+.thirdPage_tree2{
+  height: 50vw;
+  position: absolute;
+  left: calc(var(--posPage3) + 8vw);
+  bottom: 10vw;
+  z-index: -10;
+}
+.thirdPage_tree3{
+  height: 65vw;
+  position: absolute;
+  left: calc(var(--posPage3) + 54vw);
+  bottom: 4vw;
+  z-index: -10;
+}
+.tiger{
+  position: absolute;
+  width: 25vw;
+  left: calc(var(--posPage3) + 29vw);
+  bottom: 5vh;
+  transform: scaleX(-1);
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 5;
+}
+.tiger:hover{
+  transform: scaleX(-1.1) scaleY(1.1);
+}
+
+.squirrel{
+  position: absolute;
+  width: 8vw;
+  left: calc(var(--posPage3) + 26.5vw);
+  top: 11vw;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 10;
+}
+.squirrel:hover{
+  transform: scale(1.1);
+}
+
+.binturong{
+  position: absolute;
+  width: 13vw;
+  left: calc(var(--posPage3) + 67vw);
+  top: 18vw;
+  transform: scaleX(-1) rotate(-20deg);
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 50;
+}
+.binturong:hover{
+  transform: scaleX(-1.1) scaleY(1.1) rotate(-20deg);
+}
+
+/* Fourth Page */
+.fourthPage_tree1{
+  height: 80vw;
+  position: absolute;
+  left: calc(var(--posPage4) + 73vw);
+  bottom: -2.5vw;
+  z-index: 10;
+}
+.fourthPage_tree2{
+  height: 67vw;
+  position: absolute;
+  left: calc(var(--posPage4) - 3vw);
+  bottom: 1.5vw;
+  z-index: -10;
+}
+.fourthPage_tree3{
+  height: 54vw;
+  position: absolute;
+  left: calc(var(--posPage4) + 48.5vw);
+  bottom: 12.5vw;
+  z-index: -10;
+}
+.peaCock{
+  position: absolute;
+  width: 18vw;
+  left: calc(var(--posPage4) + 45vw);
+  bottom: 5vh;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 50;
+}
+.peaCock:hover{
+  transform: scale(1.1) ;
+}
+
+.rhinoHornbill{
+  position: absolute;
+  width: 10vw;
+  left: calc(var(--posPage4) + 30vw);
+  top: 13vw;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 50;
+}
+.rhinoHornbill:hover{
+  transform: scale(1.1);
+}
+
+.blackKite{
+  position: absolute;
+  width: 5vw;
+  left: calc(var(--posPage4) + 70vw);
+  top: 5vw;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 50;
+}
+.blackKite:hover{
+  transform: scale(1.1) ;
+}
+
+
+/* Fifth Page */
+.fifthPage_tree1{
+  height: 80vw;
+  position: absolute;
+  left: calc(var(--posPage5) + 78vw);
+  bottom: -1vw;
+}
+.fifthPage_tree2{
+  width: 100vw;
+  position: absolute;
+  left: calc(var(--posPage5) + 20vw);
+  bottom: -8.5vw;
+  z-index: -5;
+}
+.fifthPage_tree3{
+  height: 50vw;
+  position: absolute;
+  left: calc(var(--posPage5) + 6.5vw);
+  bottom: 17.5vw;
+  z-index: -10;
+}
+.fifthPage_tree4{
+  height: 48vw;
+  position: absolute;
+  left: calc(var(--posPage5) + 53vw);
+  bottom: 13vw;
+  z-index: -10;
+}
+.crocodile{
+  position: absolute;
+  width: 40vw;
+  left: calc(var(--posPage5) + 20vw);
+  bottom: 2.5vw;
+  cursor: pointer;
+  transform: rotate(-8deg);
+  transition: 0.5s;
+  z-index: 5;
+}
+.crocodile:hover{
+  transform: scale(1.1) rotate(-8deg);
+}
+
+.blueLizard{
+  position: absolute;
+  width: 3.5vw;
+  left: calc(var(--posPage5) + 75vw);
+  top: 15vw;
+  cursor: pointer;
+  transform: rotate(10deg);
+  transition: 0.5s;
+  z-index: 50;
+}
+.blueLizard:hover{
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* Six Page */
+.sixPage_tree1{
+  height: 80vw;
+  position: absolute;
+  left: calc(var(--posPage6) + 70vw);
+  bottom: -2.5vw;
+}
+.sixPage_tree2{
+  width: 90vw;
+  position: absolute;
+  left: calc(var(--posPage6) + 10vw);
+  bottom: -10.5vw;
+}
+.sixPage_tree3{
+  height: 55vw;
+  position: absolute;
+  left: calc(var(--posPage6) + 58vw);
+  bottom: 10vw;
+  z-index: -10;
+}
+.doichangFrog{
+  position: absolute;
+  width: 11vw;
+  left: calc(var(--posPage6) + 45vw);
+  bottom: 11vw;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 50;
+}
+.doichangFrog:hover{
+  transform: scale(1.1) ;
+}
+
+.himalayanNewt{
+  position: absolute;
+  width: 10vw;
+  left: calc(var(--posPage6) + 60vw);
+  bottom: 19vw;
+  cursor: pointer;
+  transform: rotate(15deg);
+  transition: 0.5s;
+  z-index: 50;
+}
+.himalayanNewt:hover{
+  transform: scale(1.1);
+}
+
+/* Seven Page */
+.sevenPage_tree1{
+  width: 130vw;
+  position: absolute;
+  left: calc(var(--posPage7) + 0vw);
+  bottom: -10vw;
+  z-index: -5;
+}
+.sevenPage_tree2{
+  height: 50vw;
+  position: absolute;
+  left: calc(var(--posPage7) + 5vw);
+  bottom: 12vw;
+  z-index: -10;
+}
+.sevenPage_tree3{
+  height: 60vw;
+  position: absolute;
+  left: calc(var(--posPage7) + 67vw);
+  bottom: 8vw;
+  z-index: -10;
+}
+.troidesHelena{
+  position: absolute;
+  width: 5vw;
+  left: calc(var(--posPage7) + 40vw);
+  bottom: 28vw;
+  cursor: pointer;
+  transform: scaleX(-1) rotate(25deg);
+  transition: 0.5s;
+  z-index: 50;
+}
+.troidesHelena:hover{
+  transform: scaleX(-1.1) scaleY(1.1) rotate(25deg);
+}
+
+.giraffeStagBeetle{
+  position: absolute;
+  width: 10vw;
+  left: calc(var(--posPage7) + 58vw);
+  bottom: 11vw;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 50;
+}
+.giraffeStagBeetle:hover{
+  transform: scale(1.1);
+}
+
+/* Eight Page */
+.eightPage_tree1{
+  height: 60vw;
+  position: absolute;
+  left: calc(var(--posPage8) + 70vw);
+  bottom: 0vw;
+  z-index: 10;
+}
+.eightPage_tree2{
+  width: 100vw;
+  position: absolute;
+  left: calc(var(--posPage8) + 0vw);
+  bottom: 5vw;
+  z-index: -5;
+}
+.text_area{
+  width: 30vw;
+  position: absolute;
+  text-align: center;
+  z-index: 50;
+}
+#text_page3{
+  font-size: 1.2vw;
+  color: black;
   z-index: 70;
+}
+.nextButton{
+  transition: 0.25s;
+}
+.nextButton:hover{
+  transform: scale(1.2);
+}
+
+/*----- Modal -----*/
+#animalModal{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  z-index: -100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.backgroundModal{
+  position:absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(0, 0%, 10%);
+  opacity: 0.5;
+  z-index: 50;
+}
+
+.close{
+  position:absolute;
+  background:transparent;
+  width:1.8vw;
+  height:1.8vw;
+  color: black;
+  font-size:2.5em;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align:center;
+  right:4vw;
+  top:5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:pointer;
+  transition: 0.25s;
+  z-index: 110;
+}
+.close:hover{
+  background-color: hsl(150, 40%, 75%);
+}
+.popupModal{
+  position: absolute;
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 105;
+}
+.popupModalBG{
+  position: absolute;
+  width: 50vw;
+  height: 70vh;
+}
+
+/* Mammal Modal */
+.mammalModal{
+  position: absolute;
+  width: 45vw;
+  height: 56vh;
+  left: 33px;
+  top: 38px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -106;
+}
+.tigerModal, .squirrelModal, .binturongModal{
+  position: absolute;
+  width: 30vw;
+  height: 50vh;
+  color: black;
+  background-color: transparent;
+  z-index: 107;
+  transition: 0.25s;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr 5fr;
+
+}
+.tigerModal{
+  opacity: 0;
+  z-index: -100;
+}
+.squirrelModal{
+  opacity: 0;
+  z-index: -100;
+}
+.binturongModal{
+  opacity: 0;
+  z-index: -100;
+}
+.tigerName, .squirrelName, .binturongName{
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tigerPic, .squirrelPic, .binturongPic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tigerPicModal{
+  width: 15vw;
+  position: absolute;
+  transform: scaleX(-1);
+}
+.squirrelPicModal{
+  width: 10vw;
+  position: absolute;
+}
+.binturongPicModal{
+  width: 15vw;
+  position: absolute;
+}
+.tigerContent, .squirrelContent, .binturongContent{
+}
+
+.mammalPopupIcon{
+  position: absolute;
+  margin: 20;
+  width: 3.6vw;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+/* Mammal Modal */
+
+/* Bird Modal */
+.birdModal{
+  position: absolute;
+  width: 45vw;
+  height: 56vh;
+  left: 33px;
+  top: 38px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -106;
+}
+.peaCockModal, .rhinoHornbillModal, .blackKiteModal{
+  position: absolute;
+  width: 30vw;
+  height: 50vh;
+  color: black;
+  background-color: transparent;
+  z-index: 107;
+  transition: 0.25s;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr 5fr;
+
+}
+.peaCockModal{
+  opacity: 0;
+  z-index: -100;
+}
+.rhinoHornbillModal{
+  opacity: 0;
+  z-index: -100;
+}
+.blackKiteModal{
+  opacity: 0;
+  z-index: -100;
+}
+.peaCockName, .rhinoHornbillName, .blackKiteName{
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.peaCockPic, .rhinoHornbillPic, .blackKitePic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tigerPicModal{
+  width: 15vw;
+  position: absolute;
+  transform: scaleX(-1);
+}
+.peaCockPicModal{
+  width: 12vw;
+  position: absolute;
+}
+.rhinoHornbillPicModal{
+  width: 8vw;
+  position: absolute;
+}
+.blackKitePicModal{
+  width: 4vw;
+  position: absolute;
+}
+
+.birdPopupIcon{
+  position: absolute;
+  margin: 20;
+  width: 3.6vw;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+/* /Bird Modal */
+
+/* Reptile Modal */
+.reptileModal{
+  position: absolute;
+  width: 45vw;
+  height: 56vh;
+  left: 33px;
+  top: 38px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -106;
+}
+.crocodileModal, .blueLizardModal{
+  position: absolute;
+  width: 30vw;
+  height: 50vh;
+  color: black;
+  background-color: transparent;
+  z-index: 107;
+  transition: 0.25s;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr 5fr;
+
+}
+.crocodileModal{
+  opacity: 0;
+  z-index: -100;
+}
+.blueLizardModal{
+  opacity: 0;
+  z-index: -100;
+}
+.crocodileName, .blueLizardName{
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crocodilePic, .blueLizardPic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crocodilePicModal{
+  width: 25vw;
+  position: absolute;
+}
+.blueLizardPicModal{
+  width: 5vw;
+  position: absolute;
+  transform: rotate(90deg);
+}
+
+.reptilePopupIcon{
+  position: absolute;
+  margin: 20;
+  width: 3.6vw;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+/* /Reptile Modal */
+
+/* Amphibians Modal */
+.amphibiansModal{
+  position: absolute;
+  width: 45vw;
+  height: 56vh;
+  left: 33px;
+  top: 38px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -106;
+}
+.doichangFrogModal, .himalayanNewtModal{
+  position: absolute;
+  width: 30vw;
+  height: 50vh;
+  color: black;
+  background-color: transparent;
+  z-index: 107;
+  transition: 0.25s;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr 5fr;
+
+}
+.doichangFrogModal{
+  opacity: 0;
+  z-index: -100;
+}
+.himalayanNewtModal{
+  opacity: 0;
+  z-index: -100;
+}
+.doichangFrogName, .himalayanNewtName{
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.doichangFrogPic, .himalayanNewtPic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.doichangFrogPicModal{
+  width: 10vw;
+  position: absolute;
+}
+.himalayanNewtPicModal{
+  width: 15vw;
+  position: absolute;
+}
+
+.amphibiansPopupIcon{
+  position: absolute;
+  margin: 20;
+  width: 3.6vw;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+/* /Amphibians Modal */
+
+/* Insect Modal */
+.insectModal{
+  position: absolute;
+  width: 45vw;
+  height: 56vh;
+  left: 33px;
+  top: 38px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -106;
+}
+.troidesHelenaModal, .giraffeStagBeetleModal{
+  position: absolute;
+  width: 30vw;
+  height: 50vh;
+  color: black;
+  background-color: transparent;
+  z-index: 107;
+  transition: 0.25s;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5fr 5fr;
+
+}
+.troidesHelenaModal{
+  opacity: 0;
+  z-index: -100;
+}
+.giraffeStagBeetleModal{
+  opacity: 0;
+  z-index: -100;
+}
+.troidesHelenaName, .giraffeStagBeetleName{
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.troidesHelenaPic, .giraffeStagBeetlePic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.troidesHelenaPicModal{
+  width: 6.5vw;
+  position: absolute;
+}
+.giraffeStagBeetlePicModal{
+  width: 10vw;
+  position: absolute;
+}
+
+.insectPopupIcon{
+  position: absolute;
+  margin: 20;
+  width: 3.6vw;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+/* /Insect Modal */
+
+.popupIcon{
+  margin: 5;
+  width: 3.6vw;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.popupIcon:hover{
+  transform: scale(1.05);
+  background-color: hsl(150, 40%, 75%);
+}
+
+/* Animal Datascene */
+#popupModal[data-scene = "mammalModal"] .mammalModal{
+  opacity: 1;
+  z-index: 106;
+}
+#popupModal[data-scene = "birdModal"] .birdModal{
+  opacity: 1;
+  z-index: 106;
+}
+#popupModal[data-scene = "reptileModal"] .reptileModal{
+  opacity: 1;
+  z-index: 106;
+}
+#popupModal[data-scene = "amphibiansModal"] .amphibiansModal{
+  opacity: 1;
+  z-index: 106;
+}
+#popupModal[data-scene = "insectModal"] .insectModal{
+  opacity: 1;
+  z-index: 106;
+}
+
+
+
+/* --- Mammal Datascene --- */
+#mammalModal[data-scene = "tigerModal"] .tigerModal{
+  opacity: 1;
+  z-index: 100;
+}
+#mammalModal[data-scene = "squirrelModal"] .squirrelModal{
+  opacity: 1;
+  z-index: 100;
+}
+#mammalModal[data-scene = "binturongModal"] .binturongModal{
+  opacity: 1;
+  z-index: 100;
+}
+
+#mammalModal[data-scene = "tigerModal"] .tigerPopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+#mammalModal[data-scene = "squirrelModal"] .squirrelPopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+#mammalModal[data-scene = "binturongModal"] .binturongPopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+
+
+
+/* --- Bird Datascene --- */
+#birdModal[data-scene = "peaCockModal"] .peaCockModal{
+  opacity: 1;
+  z-index: 100;
+}
+#birdModal[data-scene = "rhinoHornbillModal"] .rhinoHornbillModal{
+  opacity: 1;
+  z-index: 100;
+}
+#birdModal[data-scene = "blackKiteModal"] .blackKiteModal{
+  opacity: 1;
+  z-index: 100;
+}
+
+#birdModal[data-scene = "peaCockModal"] .peaCockPopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+#birdModal[data-scene = "rhinoHornbillModal"] .rhinoHornbillPopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+#birdModal[data-scene = "blackKiteModal"] .blackKitePopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+
+
+
+/* --- Reptile Datascene --- */
+#reptileModal[data-scene = "crocodileModal"] .crocodileModal{
+  opacity: 1;
+  z-index: 100;
+}
+#reptileModal[data-scene = "blueLizardModal"] .blueLizardModal{
+  opacity: 1;
+  z-index: 100;
+}
+
+#reptileModal[data-scene = "crocodileModal"] .crocodilePopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+#reptileModal[data-scene = "blueLizardModal"] .blueLizardPopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+
+
+
+/* --- Amphibians Datascene --- */
+#amphibiansModal[data-scene = "doichangFrogModal"] .doichangFrogModal{
+  opacity: 1;
+  z-index: 100;
+}
+#amphibiansModal[data-scene = "himalayanNewtModal"] .himalayanNewtModal{
+  opacity: 1;
+  z-index: 100;
+}
+
+#amphibiansModal[data-scene = "doichangFrogModal"] .doichangFrogPopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+#amphibiansModal[data-scene = "himalayanNewtModal"] .himalayanNewtPopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+
+
+
+/* --- Insect Datascene --- */
+#insectModal[data-scene = "troidesHelenaModal"] .troidesHelenaModal{
+  opacity: 1;
+  z-index: 100;
+}
+#insectModal[data-scene = "giraffeStagBeetleModal"] .giraffeStagBeetleModal{
+  opacity: 1;
+  z-index: 100;
+}
+
+#insectModal[data-scene = "troidesHelenaModal"] .troidesHelenaPopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+#insectModal[data-scene = "giraffeStagBeetleModal"] .giraffeStagBeetlePopupIcon{
+  background-color: hsl(150, 30%, 50%);
+}
+
+
+/*  Cursor Light */
+/* Flashlight Overlay */
+:root {
+  --cursor: auto;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+  --a1: 0;
+  --a2: 0;
+  --v: 10vmax;
+  cursor: var(--cursor);
+  transition: 0.5s;
+}
+:root:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 150;
+  background: radial-gradient(
+    circle var(--v) at var(--cursorX) var(--cursorY),
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,var(--a1)) 80%,
+    rgba(0,0,0,var(--a2)) 100%
+  );
+  transition: 0.5s;
 }
