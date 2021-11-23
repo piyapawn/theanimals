@@ -153,7 +153,7 @@ function myFunction() {
     tiger.style.opacity = "1";
     tiger.style.left = "calc(var(--posPage3) + 29vw)";
     squirrel.style.opacity = "1";
-    squirrel.style.left = "calc(var(--posPage3) + 26.5vw)";
+    squirrel.style.left = "calc(var(--posPage3) + 26vw)";
     binturong.style.opacity = "1";
     binturong.style.left = "calc(var(--posPage3) + 67vw)";
   }
@@ -161,7 +161,7 @@ function myFunction() {
     tiger.style.opacity = "0";
     tiger.style.left = "calc(var(--posPage3) + 26vw)";
     squirrel.style.opacity = "0";
-    squirrel.style.left = "calc(var(--posPage3) + 23.5vw)";
+    squirrel.style.left = "calc(var(--posPage3) + 23vw)";
     binturong.style.opacity = "0";
     binturong.style.left = "calc(var(--posPage3) + 70vw)";
   }
@@ -287,12 +287,12 @@ function playMusic() {
   var musicBtn = document.getElementsByClassName("musicButton");
   if(musicPlayPause%2 == 0){
     music.play();
-    musicBtn[0].style.textDecoration = "none";
+    musicBtn[0].innerHTML = "&#xf028;";
     console.log(musicPlayPause%2);
   }
   else if(musicPlayPause%2 == 1){
     music.pause();
-    musicBtn[0].style.textDecoration = "line-through";
+    musicBtn[0].innerHTML = "&#xf026;";
     console.log(musicPlayPause%2);
   }
   musicPlayPause++;

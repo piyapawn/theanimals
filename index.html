@@ -1,8 +1,8 @@
 <html>
   <head>
+    <script src="javascript.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="javascript.js"></script>
     <title>What if animals gone?</title>
   </head>
   <body>
@@ -12,7 +12,7 @@
       <button class="scrollView" onclick="checkOffSetLeft()">OffSetLeft</button>
     </div> -->
     <!-- Light -->
-    <div id="light" class="light fa fa-lightbulb-o" onclick="lightSwitch(); modalCount++;" style="font-size: 5em;"></div>
+    <div id="light" class="light fa" onclick="lightSwitch(); modalCount++;" style="font-size: 5em;">&#xf0eb;</div>
     
     <!-- Header -->
     <header>
@@ -20,9 +20,12 @@
         <a class="firstPageIcon" href="#first_page">
           <img class="fullwidth-img" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/ชื่อเว็ป.png">
         </a>
+        <a class="mobileButton" href="https://whatif-animals-gone-mobile.netlify.app/">
+          <img class="mobilePic" src="/mobilePic.png" alt="" width="40vw">
+        </a>
       </div>
       <div class="header_right">
-        <a href="#first_page"><b class="nav_menu">หน้าหลัก</b></a>
+        <a href="https://whatif-animals-gone-mobile.netlify.app/"><b class="nav_menu">หน้าหลัก</b></a>
 
         <!-- Drop Down Button -->
         <div class="dropdown">
@@ -39,8 +42,9 @@
 
         <a href="cause-page.html"><b class="nav_menu">สาเหตุการลดลง</b></a>
         <a href="solve-page.html"><b class="nav_menu">วิธีแก้ปัญหา</b></a>
-        <audio id="myMusic" src="05. Greenpath.mp3" loop="loop"></audio>
-        <button class="musicButton" onclick="playMusic()">♫</button>
+        <audio id="myMusic" src="/background music/relax-in-the-forest-background-music-for-video-9145.mp3" loop="loop"></audio>
+        <div class="musicButton fa" onclick="playMusic()" style="font-size: 3rem; color: rgb(0, 60, 0);">&#xf026;</div>
+        
       </div>
     </header>
     <!-- /Header -->
@@ -57,7 +61,7 @@
           <img class="fullwidth-bush" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/หน้าชื่อเว็บ ป่าหน้า-01.png">
 
           <!-- Layer 2 -->
-          <img id="jeep" class="fullwidth-jeepCar" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/รถ jeep -01.png">
+          <img id="jeep" class="fullwidth-jeepCar" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/รถ jeep.png">
 
           <!-- Layer 3 -->
           <img class="firstPage_tree1" src="pictures/Desktop หน้าแรก-เกริ่น-จบ/เกริ่น ป่าหลัง 1.1.png">
@@ -252,11 +256,14 @@
               <img class="binturongPicModal" src="/pictures/GIF สัตว์/หมีขอ.gif" alt="">
             </div>
             <div class="binturongContent">
-              <h4>ปัจจัยประชากรเสือโคร่งลดลง</h4>
-              <p>การที่เหยื่อของเสือโคร่งถูกล่าโดยมนุษย์</p>
+              <p>เป็นสัตว์มีกระดูกสันหลังชนิดหนึ่งในจำพวกสัตว์เลี้ยงลูกด้วยนม เป็นสัตว์จำพวกชะมดและอีเห็น (Viverridae) 
+                ซึ่งมีขนาดใหญ่ที่สุด ในธรรมชาติพบได้ในป่าทึบตั้งแต่อินเดียทางตะวันออกเฉียงเหนือ คาบสมุทรอินโดจีน เกาะสุมาตรา 
+                ไปจนถึงเกาะบอร์เนียว
+              </p>
+              <h4>ปัจจัยประชากรหมีขอลดลง</h4>
               <ul>
-                <li>การสูญเสียถิ่นที่อยู่อาศัย เกิดจากมนุษย์ต้องการเปลี่ยน หรือขยายพื้นที่เพื่อทำการเกษตรผืนป่าขนาดใหญ่ถูกบุกรุกจนกลายเป็นหย่อมป่าขนาดเล็กๆ</li>
-                <li>การที่เสือโคร่งตกเป็นเป้าหมายของการล่าโดยตรงจากความต้องการของตลาดที่นำหนังเสือโคร่งมาใช้ตกแต่งบ้าน หรือความเชื่อที่ว่าชิ้นส่วนอวัยวะของเสือโคร่งนั้นเป็นตัวยาแผนโบราณของจีน</li>
+                <li>ประสบปัญหาทั้งการรุกล้ำถิ่นที่อยู่อาศัย</li>
+                <li>ถูกล่าโดยมนุษย์ทั้งเพื่อนำมาเป็นอาหาร และบางส่วนก็มาจากการล่าเพื่อนำลูกหมีไปเลี้ยง ในหลายประเทศรวมถึงนำมาใช้ในการแสดงด้วย</li>
               </ul>
             </div>
           </div>
@@ -280,12 +287,11 @@
               <img class="peaCockPicModal" src="/pictures/GIF สัตว์/นกยูง.gif" alt="">
             </div>
             <div class="peaCockContent">
-              <h4>ปัจจัยประชากรเสือโคร่งลดลง</h4>
-              <p>การที่เหยื่อของเสือโคร่งถูกล่าโดยมนุษย์</p>
-              <ul>
-                <li>การสูญเสียถิ่นที่อยู่อาศัย เกิดจากมนุษย์ต้องการเปลี่ยน หรือขยายพื้นที่เพื่อทำการเกษตรผืนป่าขนาดใหญ่ถูกบุกรุกจนกลายเป็นหย่อมป่าขนาดเล็กๆ</li>
-                <li>การที่เสือโคร่งตกเป็นเป้าหมายของการล่าโดยตรงจากความต้องการของตลาดที่นำหนังเสือโคร่งมาใช้ตกแต่งบ้าน หรือความเชื่อที่ว่าชิ้นส่วนอวัยวะของเสือโคร่งนั้นเป็นตัวยาแผนโบราณของจีน</li>
-              </ul>
+              <h4>ปัจจัยประชากรนกยูงลดลง</h4>
+              <p>
+                การใช้ประโยชน์จากพื้นที่ของมนุษย์นั้นมีการลุกล้ำเข้าไปยังถิ่นที่อยู่อาศัยของสัตว์ป่า โดยเฉพาะ
+                นกยูงเป็นผลให้ประชากรนกยูงในธรรมชาติมีจำนวนลดน้อยลงไปด้วย
+              </p>
             </div>
           </div>
           <!-- Rhinoceros Hornbill Modal -->
@@ -295,14 +301,21 @@
               <img class="rhinoHornbillPicModal" src="/pictures/GIF สัตว์/นกแรด.gif" alt="">
             </div>
             <div class="rhinoHornbillContent">
-              <p>ประชากรกระรอกบางชนิดในพื้นที่อนุรักษ์ลดจำนวนลงอย่างรวดเร็ว โดยเฉพาะกลุ่มในภาคเหนือ และภาคตะวันออกเฉียงเหนือ</p>
-              <h4>ปัจจัยประชากรกระรอกสามสีลดลง</h4>
+              <p>
+                ในเมืองไทยพบนกเงือกหัวแรดได้เฉพาะในป่าดิบทางภาคใต้ตอนล่างสุด นกเงือกหัวแรดถูกเสนอให้
+                ยกระดับจากใกล้ถูกคุกคามเป็นเสี่ยงต่อการสูญพันธุ์
+              </p>
+              <h4>ปัจจัยประชากรนกเงือกหัวแรดลดลง</h4>
               <ul>
-                <li>ถูกล่าเพื่อเป็นอาหาร</li>
-                <li>ลักลอบจับเลี้ยงกระรอกหลากสีเพื่อค้าเป็นสัตว์
-                  มีการค้าขายในตลาดค้าสัตว์ถึง 7 ชนิด
-                  ย่อย โดยชนิดย่อย C. finlaysonii menamicus มีความชุกชุมในธรรมชาติน้อยมาก และ 
-                  C. finlaysonii sinistralis ไม่พบการกระจายพื้นที่ป่าอนุรักษ์บางแห่งภาคเหนือแล้ว</li>
+                <li>
+                  ถูกล่าเพื่อเอาโหนก การล่าเพื่อเอาขนมาใช้เป็นเครื่องประดับ หรือแม้กระทั่งถูกล่าเป็นอาหาร
+                  ด้วยในไทยเองก็มีการล้วงลูกนกจากโพรงรังมาขายเป็นสัตว์เลี้ยงผิดกฎหมาย
+                </li>
+                <li>
+                  การสูญเสียถิ่นอาศัยยังคงเป็นปัจจัยหลัก นกป่าตัวโตเช่นนี้ต้องการพื้นที่ป่าที่กว้างขวาง
+                  อันเต็มไปด้วยพืชอาหารกระจัดกระจายอยู่ทั่ว และมีไม้ยืนต้นขนาดใหญ่เพียงพอที่จะ
+                  มีโพรงให้ทำรัง
+                </li>
               </ul>
             </div>
           </div>
@@ -313,12 +326,12 @@
               <img class="blackKitePicModal" src="/pictures/GIF สัตว์/เหยี่ยวดำ_1.gif" alt="">
             </div>
             <div class="blackKiteContent">
-              <h4>ปัจจัยประชากรเสือโคร่งลดลง</h4>
-              <p>การที่เหยื่อของเสือโคร่งถูกล่าโดยมนุษย์</p>
-              <ul>
-                <li>การสูญเสียถิ่นที่อยู่อาศัย เกิดจากมนุษย์ต้องการเปลี่ยน หรือขยายพื้นที่เพื่อทำการเกษตรผืนป่าขนาดใหญ่ถูกบุกรุกจนกลายเป็นหย่อมป่าขนาดเล็กๆ</li>
-                <li>การที่เสือโคร่งตกเป็นเป้าหมายของการล่าโดยตรงจากความต้องการของตลาดที่นำหนังเสือโคร่งมาใช้ตกแต่งบ้าน หรือความเชื่อที่ว่าชิ้นส่วนอวัยวะของเสือโคร่งนั้นเป็นตัวยาแผนโบราณของจีน</li>
-              </ul>
+              <h4>ปัจจัยประชากรเหยี่ยวดำลดลง</h4>
+              <p>
+                เหยี่ยวดำพันธุ์ไทยเป็นนกนักล่าประจำถิ่นที่อาศัยในทุ่งนาและมีสถานภาพเป็นสัตว์ป่าคุ้มครองใกล้สูญพันธุ์
+                ในประเทศไทย เพราะประชากรลดลงจากการขโมยลูกเหยี่ยวไปขายในตลาดค้าสัตว์ป่า เพื่อนำมาเลี้ยงเป็น
+                สัตว์เลี้ยงผิดกฏหมายข้อมูลการสืบพันธุ์ของเหยี่ยวดำไทยยังไม่มีการศึกษาอย่างละเอียดในประเทศ
+              </p>
             </div>
           </div>
           <!-- Bird Pop Up Icon -->

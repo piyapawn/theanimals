@@ -52,13 +52,10 @@ header{
   width: 100vw;
   position: fixed;
   display: flex;
-  background-color: hsl(40, 75%, 90%);
+  background-color: rgb(153, 167, 152);
   z-index: 80;
-  opacity: 0;
-  transition: 0.25s;
-}
-header:hover{
   opacity: 1;
+  transition: 0.25s;
 }
 .header_left{
   width: 100%;
@@ -100,6 +97,14 @@ header:hover{
   color: rgb(40, 97, 200);
 }
 
+.mobileButton{
+  margin: auto 20px auto 20px;
+  transition: 0.25s;
+}
+.mobileButton:hover{
+  transform: scale(1.1);
+}
+
 /* Drop Down Button */
 .dropdown {
   position: relative;
@@ -120,7 +125,7 @@ header:hover{
   font-size: 1rem;
   display: none;
   position: absolute;
-  background-color: hsl(40, 75%, 90%);
+  background-color: rgb(153, 167, 152);
   border-radius: 10px;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -137,7 +142,7 @@ header:hover{
 }
 
 .dropdown_content a:hover {
-  background-color: hsl(40, 30%, 90%);
+  background-color: rgb(200, 200, 200);
   font-weight: bold;
   border-radius: 10px;
 }
@@ -153,22 +158,15 @@ header:hover{
 /* /Drop Down Button */
 
 .musicButton{
-  font-size: 3rem;
-  text-decoration: line-through;
-  color: rgb(40, 97, 200);
-  background-color: rgb(220, 232, 255);
+  width: 3vw;
   margin: auto 30px auto 30px;
   padding: 0px 20px 0px 20px;
-  border: 1px solid rgb(40, 97, 200);
-  border-radius: 30px;
   cursor: pointer;
   transition: 0.25s;
 }
 .musicButton:hover{
-  border-radius: 0px;
-  border: 1px solid white;
-  color: rgb(220, 232, 255);
-  background-color: rgb(40, 97, 200);
+  color: rgb(0, 60, 0);
+  transform: scale(1.1);
 }
 
 .fullwidth-img{
@@ -372,8 +370,8 @@ header:hover{
 .squirrel{
   position: absolute;
   width: 8vw;
-  left: calc(var(--posPage3) + 26.5vw);
-  top: 11vw;
+  left: calc(var(--posPage) + 26vw);
+  bottom: 33vw;
   cursor: pointer;
   transition: 0.5s;
   z-index: 10;
@@ -386,7 +384,7 @@ header:hover{
   position: absolute;
   width: 13vw;
   left: calc(var(--posPage3) + 67vw);
-  top: 18vw;
+  bottom: 27vw;
   transform: scaleX(-1) rotate(-20deg);
   cursor: pointer;
   transition: 0.5s;
@@ -435,7 +433,7 @@ header:hover{
   position: absolute;
   width: 10vw;
   left: calc(var(--posPage4) + 30vw);
-  top: 13vw;
+  bottom: 22vw;
   cursor: pointer;
   transition: 0.5s;
   z-index: 50;
@@ -448,7 +446,7 @@ header:hover{
   position: absolute;
   width: 5vw;
   left: calc(var(--posPage4) + 70vw);
-  top: 5vw;
+  bottom: 33vw;
   cursor: pointer;
   transition: 0.5s;
   z-index: 50;
@@ -504,7 +502,7 @@ header:hover{
   position: absolute;
   width: 3.5vw;
   left: calc(var(--posPage5) + 75vw);
-  top: 15vw;
+  bottom: 21vw;
   cursor: pointer;
   transform: rotate(10deg);
   transition: 0.5s;
@@ -675,8 +673,8 @@ header:hover{
   border: 2px solid black;
   border-radius: 10px;
   text-align:center;
-  right:4vw;
-  top:5vh;
+  right:5vw;
+  top:7.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -685,6 +683,7 @@ header:hover{
   z-index: 110;
 }
 .close:hover{
+  border-radius: 0px;
   background-color: hsl(150, 40%, 75%);
 }
 .popupModal{
@@ -1233,5 +1232,4 @@ header:hover{
     rgba(0,0,0,var(--a1)) 80%,
     rgba(0,0,0,var(--a2)) 100%
   );
-  transition: 0.5s;
 }

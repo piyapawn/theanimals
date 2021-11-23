@@ -21,12 +21,12 @@ function playMusic() {
   var musicBtn = document.getElementsByClassName("musicButton");
   if(musicPlayPause%2 == 0){
     music.play();
-    musicBtn[0].style.textDecoration = "none";
+    musicBtn[0].innerHTML = "&#xf028;";
     console.log(musicPlayPause%2);
   }
   else if(musicPlayPause%2 == 1){
     music.pause();
-    musicBtn[0].style.textDecoration = "line-through";
+    musicBtn[0].innerHTML = "&#xf026;";
     console.log(musicPlayPause%2);
   }
   musicPlayPause++;

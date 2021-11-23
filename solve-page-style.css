@@ -13,13 +13,10 @@ header{
     width: 100vw;
     position: fixed;
     display: flex;
-    background-color: hsl(40, 75%, 90%);
+    background-color: rgb(153, 167, 152);
     z-index: 80;
-    opacity: 0;
-    transition: 0.25s;
-}
-header:hover{
     opacity: 1;
+    transition: 0.25s;
 }
 .header_left{
   width: 100%;
@@ -80,7 +77,7 @@ header:hover{
   font-size: 1rem;
   display: none;
   position: absolute;
-  background-color: hsl(40, 75%, 90%);
+  background-color: rgb(153, 167, 152);
   border-radius: 10px;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -97,7 +94,7 @@ header:hover{
 }
 
 .dropdown_content a:hover {
-  background-color: hsl(40, 30%, 90%);
+  background-color: rgb(200, 200, 200);
   font-weight: bold;
   border-radius: 10px;
 }
@@ -113,23 +110,16 @@ header:hover{
 /* /Drop Down Button */
 
 .musicButton{
-  font-size: 3rem;
-  text-decoration: line-through;
-  color: rgb(40, 97, 200);
-  background-color: rgb(220, 232, 255);
-  margin: auto 30px auto 30px;
-  padding: 0px 20px 0px 20px;
-  border: 1px solid rgb(40, 97, 200);
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.25s;
-}
-.musicButton:hover{
-  border-radius: 0px;
-  border: 1px solid white;
-  color: rgb(220, 232, 255);
-  background-color: rgb(40, 97, 200);
-}
+    width: 3vw;
+    margin: auto 30px auto 30px;
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
+    transition: 0.25s;
+  }
+  .musicButton:hover{
+    color: rgb(0, 60, 0);
+    transform: scale(1.1);
+  }
 
 .fullwidth-img{
   width: 20%;
@@ -512,6 +502,25 @@ header:hover{
     justify-content: center;
     text-align: center;
 }
+.nextPage{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.nextPage:hover{
+    transform: scale(1.1);
+}
+.nextPagePic{
+    position: absolute;
+}
+.nextPageText{
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
 
 
 /* Last Page Solve */
@@ -591,6 +600,10 @@ h3.content_last_page_solve{
 #page[data-scene = "scene5"] .scene5{
     opacity: 1;
     z-index: 10;
+}
+#page[data-scene = "scene5"] .nextButton{
+    opacity: 0;
+    z-index: -1;
 }
 
 /* Last Page Solve */

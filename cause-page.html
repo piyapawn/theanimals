@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="cause-page-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="cause-page-script.js"></script>
     <title>Cause Page</title>
 </head>
@@ -31,8 +32,8 @@
   
           <a href="cause-page.html"><b class="nav_menu">สาเหตุการลดลง</b></a>
           <a href="solve-page.html"><b class="nav_menu">วิธีแก้ปัญหา</b></a>
-          <audio id="myMusic" src="05. Greenpath.mp3" loop="loop"></audio>
-          <button class="musicButton" onclick="playMusic()">♫</button>
+          <audio id="myMusic" src="/background music/relax-in-the-forest-background-music-for-video-9145.mp3" loop="loop"></audio>
+          <div class="musicButton fa" onclick="playMusic()" style="font-size: 3rem; color: rgb(0, 60, 0);">&#xf026;</div>
         </div>
       </header>
       <!-- /Header -->
@@ -161,32 +162,12 @@
                     อาจทำให้สัตว์บางชนิดสูญพันธุ์ได้
                 </p>
             </div>
-        </div>
-
-        <!-- Last Page Cause -->
-        <div class="last_page_cause">
-            <img class="causePic_last_page_cause" src="/pictures/Desktop หน้าแรก-เกริ่น-จบ/ป้ายกลม_.png" alt="">
-            <div class="intheCircle">
-                <p class="content_last_page_cause">
-                    พอเรารู้สาเหตุแล้ว เหล่านักผจญภัยทั้งหลาย <br>
-                    พร้อมที่จะทำให้สัตว์ป่ากลับมามีชีวิตที่ดีขึ้นกันรึยัง
-                </p>
-                <h3 class="content_last_page_cause">ถ้าพร้อมแล้วก็ไปดูกันเลย !</h3>
-            </div>
             <!-- Button -->
-            <div class="buttonLastPageGroup">
-                <!-- Previous Button -->
-                <button class="prevButton buttonLastPage">
-                    <img class="prevPic" onclick="count--; NextPrevScene();" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/ปุ่มลูกศร.png" alt="">
-                </button>
-                <!-- Next Button -->
-                <a class="nextButton buttonLastPage" href="solve-page.html">
-                    <img class="nextPic" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/ปุ่มลูกศร.png" alt="">
-                </a>
-            </div>
-            
+            <a class="nextPage" href="/solve-page.html">
+                <img class="nextPagePic" src="/pictures/ของตกแต่งสาเหตุ วิธีแก้/ปุ่มไปหน้าต่อไป.png" alt="">
+                <p class="nextPageText">พร้อมที่จะทำให้สัตว์ป่า<br>กลับมามีชีวิตที่ดีขึ้นกันรึยัง ?</p>
+            </a>
         </div>
-
 
         <!-- /Scene -->
 
