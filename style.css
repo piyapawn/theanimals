@@ -30,8 +30,8 @@ body{
 
 /* --- Light --- */
 .light{
-  color:gold;
-  text-shadow: 0px 0px 50px gold;
+  color:black;
+  text-shadow: 0px 0px 10px white;
   position: fixed;
   padding: 10px;
   margin: 10;
@@ -767,6 +767,7 @@ header{
   position: absolute;
 }
 .tigerContent, .squirrelContent, .binturongContent{
+  overflow: scroll;
 }
 
 .mammalPopupIcon{

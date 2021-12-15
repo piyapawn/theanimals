@@ -224,9 +224,6 @@ function myFunction() {
     troidesHelena.style.left = "calc(var(--posPage7) + 37vw)";
     giraffeStagBeetle.style.opacity = "0";
     giraffeStagBeetle.style.left = "calc(var(--posPage7) + 61vw)";
-    // Cursor Light Off
-    document.addEventListener('mousemove',lightOff)
-    document.addEventListener('touchmove',lightOff)
   }
 
   var lightIcon = document.getElementById("light");
@@ -238,8 +235,8 @@ function myFunction() {
     lightIcon.style.zIndex = "200";
 
     if(modalCount%2 == 0){
+      // Cursor Light On
       function lightOn(on){
-        // Cursor Light On
         var x = on.clientX || on.touches[0].clientX
         var y = on.clientY || on.touches[0].clientY
         document.documentElement.style.setProperty('--cursor', 'none')
@@ -253,7 +250,7 @@ function myFunction() {
   
       document.addEventListener('mousemove',lightOn)
       document.addEventListener('touchmove',lightOn)
-    }   
+    }
   }
   
   else{
@@ -319,8 +316,8 @@ function lightSwitch() {
     document.addEventListener('mousemove',lightOn)
     document.addEventListener('touchmove',lightOn)
 
-    lightColor.style.color = "gold";
-    lightColor.style.textShadow = "0px 0px 10px gold";
+    lightColor.style.color = "black";
+    lightColor.style.textShadow = "0px 0px 10px white";
 
     console.log("Light Count : " + lightCount%2);
   }
@@ -341,10 +338,43 @@ function lightSwitch() {
     document.addEventListener('mousemove',lightOff)
     document.addEventListener('touchmove',lightOff)
 
-    lightColor.style.color = "black";
-    lightColor.style.textShadow = "0px 0px 10px white";
+    lightColor.style.color = "gold";
+    lightColor.style.textShadow = "0px 0px 10px gold";
 
     console.log("Light Count : " + lightCount%2);
   }
   lightCount++;
 }
+
+
+
+// Cursor Light On
+
+function lightOn(on){
+  var x = on.clientX || on.touches[0].clientX
+  var y = on.clientY || on.touches[0].clientY
+  document.documentElement.style.setProperty('--cursor', 'none')
+
+  document.documentElement.style.setProperty('--cursorX', x + 'px')
+  document.documentElement.style.setProperty('--cursorY', y + 'px')
+
+  document.documentElement.style.setProperty('--a1', 0.5)
+  document.documentElement.style.setProperty('--a2', 0.98)
+}
+
+
+
+// Cursor Light Off
+
+function lightOff(off){
+  var x = off.clientX || off.touches[0].clientX
+  var y = off.clientY || off.touches[0].clientY
+  document.documentElement.style.setProperty('--cursor', 'auto')
+
+  document.documentElement.style.setProperty('--cursorX', x + 'px')
+  document.documentElement.style.setProperty('--cursorY', y + 'px')
+
+  document.documentElement.style.setProperty('--a1', 0)
+  document.documentElement.style.setProperty('--a2', 0)
+}
+
